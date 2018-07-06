@@ -1,0 +1,8 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">{{panelTitle}}</div>
+  <input [(ngModel)]="mobile" #inputValue>
+  {{inputValue.value}}
+  <div class="panel-body">
+    <button (click)="emitAnEvent(inputValue.value)" class="btn btn-success">触发一个事件</button>
+  </div>
+</div>

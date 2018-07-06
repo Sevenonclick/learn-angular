@@ -1,0 +1,8 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">父子组件之间通讯</div>
+  <div class="panel-body">
+    <app-child #child (printf)="fatherEvent($event)" panelTit="一个新的标题" [(mobile)]="mobile"></app-child>
+    <p>电话号码：{{mobile}}</p>
+    <button (click)="child.childFn()" class="btn btn-success">调用子组件方法</button>
+  </div>
+</div>
